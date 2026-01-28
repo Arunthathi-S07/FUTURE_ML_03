@@ -97,7 +97,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(reply)
 
 def run_telegram_bot():
-    app = ApplicationBuilder().token("8340680482:AAEejEJqvZsB9yXKvdWmrrMFgiZKOXa4-C0").build()
+    app = ApplicationBuilder().token("YOUR_CHTBOT_TOKEN").build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
@@ -130,3 +130,4 @@ if st.button("Send"):
 # Display chat history
 for sender, message in st.session_state.chat_history:
     st.markdown(f"**{sender}:** {message}")
+
